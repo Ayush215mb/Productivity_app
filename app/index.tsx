@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { router } from "expo-router";
+import { Text, TouchableOpacity, View } from "react-native";
 
 export default function Index() {
   return (
@@ -7,6 +8,9 @@ export default function Index() {
         Edit app/index.tsx to edit this screen.
       </Text>
       <Text className="text-2xl font-bold text-amber-500"> yoooooo</Text>
+      <TouchableOpacity onPress={() => router.push("/(auth)")}>
+        <Text>go to auth</Text>
+      </TouchableOpacity>
     </View>
   );
 }
